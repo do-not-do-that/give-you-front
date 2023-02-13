@@ -1,13 +1,8 @@
-import Layout from './component/Layout/Layout';
-import TestCompo from './component/TestCompo/TestCompo';
+import Main from './Page/Main/Main';
 import './App.css';
 
 function App() {
-  return (
-    <Layout>
-      <TestCompo />
-    </Layout>
-  );
+  return <Main></Main>;
   // return 'App Test';
 }
 
