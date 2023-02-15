@@ -1,6 +1,7 @@
 import styles from './SocialLogin.module.css';
 import GoogleButton from '../LoginButton/google_button/googleButton';
 import KakaoButton from '../LoginButton/kakao_button/kakaoButton';
+import GiveyouButton from '../LoginButton/giveyou_button/giveyouButton';
 
 const SocialLogin = ({ googleOnSuccess }) => {
   return (
@@ -9,9 +10,7 @@ const SocialLogin = ({ googleOnSuccess }) => {
       <section className={styles.loginWrapper}>
         <GoogleButton
           onClick={() => {
-            fetch('http://localhost:7010/auth/google', {
-              mode: 'cors',
-            })
+            fetch('http://localhost:7010/auth/google')
               .then((response) => {
                 response.json();
               })
@@ -21,7 +20,24 @@ const SocialLogin = ({ googleOnSuccess }) => {
           }}
         ></GoogleButton>
         <KakaoButton></KakaoButton>
-        <GoogleButton></GoogleButton>
+        {/* <GiveyouButton
+          onClick={() => {
+            fetch('http://localhost:7010/auth/join', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                email: 'test@example.com',
+                nick: 'eunbi',
+                password: '12345',
+              }),
+            }).then((result) => {
+              console.log('결과 확인 : ', result);
+            });
+          }}
+        ></GiveyouButton> */}
+        <GiveyouButton></GiveyouButton>
       </section>
     </>
   );
