@@ -5,6 +5,6 @@ const fetchUserByIdAction = createAction('user/fetchUserByIdStatus');
 const fetchUserById = createAsyncThunk(
   fetchUserByIdAction,
   async (userData, thunkAPI) => {
-    const response = await authS;
+    // const response = await authS;
   }
 );
