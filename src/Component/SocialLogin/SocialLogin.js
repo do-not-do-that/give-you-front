@@ -19,7 +19,17 @@ const SocialLogin = ({ googleOnSuccess }) => {
               });
           }}
         ></GoogleButton>
-        <KakaoButton></KakaoButton>
+        <KakaoButton
+          onClick={() => {
+            fetch('http://localhost:7010/auth/kakao')
+              .then((response) => {
+                response.json();
+              })
+              .then((result) => {
+                console.log('결과 확인 : ', result);
+              });
+          }}
+        ></KakaoButton>
         {/* <GiveyouButton
           onClick={() => {
             fetch('http://localhost:7010/auth/join', {

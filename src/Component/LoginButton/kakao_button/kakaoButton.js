@@ -8,7 +8,7 @@ const moveKakaoAuth = () => {
 const KakaoButton = ({ onClick }) => (
   <div className={styles.buttonWrapper}>
     {/* <button className={styles.button} onClick={onClick}> */}
-    <button className={styles.button} onClick={moveKakaoAuth}>
+    <button className={styles.button} onClick={onClick}>
       <svg
         id="Bold"
         enableBackground="new 0 0 24 24"
