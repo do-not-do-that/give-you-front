@@ -1,8 +1,13 @@
 import React from 'react';
 import styles from './googleButton.module.css';
 
+const moveGoogleAuth = () => {
+  window.location.href = 'http://localhost:7010/auth/google';
+};
+
 const GoogleButton = ({ onClick }) => (
   <div className={styles.buttonWrapper}>
+    {/* <button className={styles.button} onClick={onClick}> */}
     <button className={styles.button} onClick={onClick}>
       <svg width="50" height="50" fill="none" viewBox="0 0 20 20">
         <path
